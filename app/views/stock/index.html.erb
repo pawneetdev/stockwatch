@@ -1,3 +1,12 @@
 <h1>Portfolio</h1>
 
-<%= @json %>
+<table>
+	<% @stocks.each_with_index do |stock, i| %>
+		<tr>
+			<td><%= i+1 %></td>
+			<td><%= stock["t"] %></td>
+			<td><%= stock["e"] %></td>
+			<td><%= stock["l"] %></td>
+		</tr>
+	<% end %>
+</table>
